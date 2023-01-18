@@ -27,3 +27,7 @@ Route::group(['prefix' => '/', 'as' => 'auth.'], function () {
 Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//Auth::routes();
+
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
