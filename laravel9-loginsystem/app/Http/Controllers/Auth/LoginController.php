@@ -56,6 +56,6 @@ class LoginController extends Controller
             return back()->with('status', 'Inloggegevens onjuist.');
         }
 
-        return redirect()->route('home');
+        return redirect()->route('index');
     }
 }
