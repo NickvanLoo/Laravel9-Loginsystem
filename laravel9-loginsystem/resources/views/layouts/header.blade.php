@@ -3,12 +3,12 @@
         <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
             <span class="navbar-toggler-icon"></span>
         </button>
-        {{-- <a class="navbar-brand"> <a href="{{ route('pages.index') }}"></a> --}}
+        <a class="navbar-brand"> <a href="{{ route('index') }}"></a>
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ms-auto">
                 <!-- Authentication Links -->
                 @guest
-                    {{-- @if (Route::has('login'))
+                    @if (Route::has('login'))
                         <li class="nav-item">
                             <<a class="nav-link" href="{{ route('pages.login') }}">{{ __('Login') }}</a>
                         </li>
@@ -16,7 +16,7 @@
 
                     @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('pages.register') }}">{{ __('Register') }}</a>
+                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                         </li>
                     @endif
                 @else
@@ -30,7 +30,7 @@
                             <a class="dropdown-item" href="{{ URL('logout') }}" onclick="event.preventDefault();
                                                          document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
-                            </a> --}}
+                            </a>
 
                             <form id="logout-form" action="{{ URL('logout') }}" method="POST" class="d-none">
                                 @csrf
